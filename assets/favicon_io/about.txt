@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: New Tegomin
+- Font Author: Copyright 2020 The New Tegomin Project Authors (https://github.com/nagamaki008/NewTegomin)
+- Font Source: http://fonts.gstatic.com/s/newtegomin/v10/SLXMc1fV7Gd9USdBAfPlqfN0Q3ptkDMN.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

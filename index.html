@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="./assets/favicon_io/site.webmanifest">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>MOVIE INFO</title>
+</head>
+
+<body class="body">
+    <header class="header">
+        <div class="container">
+            <h1 class="title header-title">Movies info</h1>
+            <form class="search-form" id="search-form" action="#">
+                <label for="year" class="search-label">Choose release year</label>
+                <input id="year" name="year" type="number" min="1880" placeholder="Year" class="input input-year" max="2023" step="1" value="" />
+                <label for="type" class="search-label">Choose type</label>
+                <select name="type" class="input input-type" id="type" name="type" value="">
+                    <option value="" selected>All</option>
+                    <option value="movie">Movie</option>
+                    <option value="series">Series</option>
+                    <option value="episode">Episode</option>
+
+                </select>
+                <label for="search" class="search-label">Search for a movie</label>
+                <input id="search" name="search" type="text" placeholder="Search movies" value="" class="input">
+                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+
+            </form>
+            <!-- <a class="back-home-link" href="home"><svg class="arrow-svg" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#708ED2">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+            </a> -->
+        </div>
+    </header>
+    <div class="container">
+        <main class="movies-main">
+
+            <section class="movies">
+                <div class="movie">
+                    <img class="movie-img" src="https://image.tmdb.org/t/p/w500/rr7E0NoGKxvbkb89eR1GwfoYjpA.jpg" alt="" class="movie-img">
+                    <div class="movie-about">
+                        <h3 class="movie-title title">Arrival kaip susirasti gdraugikskdkfjksdkjf kas</h3>
+                        <p class="movie-rating">8.4</p>
+                    </div>
+                </div>
+                <div class="movie">
+                    <img class="movie-img" src="https://image.tmdb.org/t/p/w500/rr7E0NoGKxvbkb89eR1GwfoYjpA.jpg" alt="" class="movie-img">
+                    <div class="movie-about">
+                        <h3 class="movie-title title">Arrival kaip susirasti gdraugikskdkfjksdkjf kas</h3>
+                        <p class="movie-rating">8.4</p>
+                    </div>
+                </div>
+                <div class="movie">
+                    <p class="movie-year">1992</p>
+                    <img class="movie-img" src="https://image.tmdb.org/t/p/w500/rr7E0NoGKxvbkb89eR1GwfoYjpA.jpg" alt="" class="movie-img">
+                    <div class="movie-about">
+                        <h3 class="movie-title title">Arrival kaip susirasti gdraugikskdkfjksdkjf kas</h3>
+                        <p class="movie-rating">8.4</p>
+                    </div>
+                </div>
+                <div class="movie">
+
+                    <div class="movie-about">
+                        <h3 class="movie-title title">Arrival kaip susirasti gdraugikskdkfjksdkjf kas</h3>
+                        <p class="movie-rating">8.4</p>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <footer></footer>
+    </div>
+
+    <script src="main.js"> </script>
+</body>
+
+</html>

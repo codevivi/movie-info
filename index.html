@@ -14,73 +14,81 @@
 </head>
 
 <body class="body">
-    <header class="header">
-        <div class="container">
-            <h1 class="title header-title">Movies info</h1>
-            <form class="search-form" id="search-form" action="#">
-                <label for="year" class="search-label">Choose release year</label>
-                <input id="year" name="year" type="number" min="1880" placeholder="Year" class="input input-year" max="2023" step="1" value="" />
-                <label for="type" class="search-label">Choose type</label>
-                <select name="type" class="input input-type" id="type" name="type" value="">
-                    <option value="" selected>All</option>
-                    <option value="movie">Movie</option>
-                    <option value="series">Series</option>
-                    <option value="episode">Episode</option>
+    <div class="search-results">
+        <header class="header">
+            <div class="container">
+                <h1 class="title header-title">Movies info</h1>
+                <form class="search-form" id="search-form" action="#">
+                    <label for="year" class="search-label label-year">Choose release year
+                        <input id="year" name="year" type="number" min="1880" placeholder="Year" data-param="y" class="input input-year" max="2023" step="1" value="" />
+                    </label>
+                    <label for="type" class="search-label">Choose type</label>
+                    <select name="type" class="input input-type" id="type" data-param="type" name="type" value="">
+                        <option value="" selected>All</option>
+                        <option value="movie">Movie</option>
+                        <option value="series">Series</option>
+                        <option value="episode">Episode</option>
 
-                </select>
-                <label for="search" class="search-label">Search for a movie</label>
-                <input id="search" name="search" type="text" placeholder="Search movies" value="" class="input">
-                <button type="submit"><i class="fa fa-search" aria-hidden="true"></i>
-                </button>
+                    </select>
+                    <label for="search" class="search-label">Search for a movie</label>
+                    <input id="search" name="search" type="text" placeholder="Search movies" minlength="1" maxlength="50" value="" data-param="s" required class="input">
+                    <button type="submit"><i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
 
-            </form>
-            <!-- <a class="back-home-link" href="home"><svg class="arrow-svg" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#708ED2">
+                </form>
+                <!-- <a class="back-home-link" href="home"><svg class="arrow-svg" xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="#708ED2">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                 </svg>
             </a> -->
+            </div>
+        </header>
+        <div class="container">
+            <div class="movies-main">
+                <p class="error-msg"></p>
+                <div class="movies">
+                </div>
+                <div class="pagination">
+                </div>
+            </div>
+
         </div>
-    </header>
-    <div class="container">
-        <main class="movies-main">
-
-            <section class="movies">
-                <div class="movie">
-                    <img class="movie-img" src="https://image.tmdb.org/t/p/w500/rr7E0NoGKxvbkb89eR1GwfoYjpA.jpg" alt="" class="movie-img">
-                    <div class="movie-about">
-                        <h3 class="movie-title title">Arrival kaip susirasti gdraugikskdkfjksdkjf kas</h3>
-                        <p class="movie-rating">8.4</p>
-                    </div>
-                </div>
-                <div class="movie">
-                    <img class="movie-img" src="https://image.tmdb.org/t/p/w500/rr7E0NoGKxvbkb89eR1GwfoYjpA.jpg" alt="" class="movie-img">
-                    <div class="movie-about">
-                        <h3 class="movie-title title">Arrival kaip susirasti gdraugikskdkfjksdkjf kas</h3>
-                        <p class="movie-rating">8.4</p>
-                    </div>
-                </div>
-                <div class="movie">
-                    <p class="movie-year">1992</p>
-                    <img class="movie-img" src="https://image.tmdb.org/t/p/w500/rr7E0NoGKxvbkb89eR1GwfoYjpA.jpg" alt="" class="movie-img">
-                    <div class="movie-about">
-                        <h3 class="movie-title title">Arrival kaip susirasti gdraugikskdkfjksdkjf kas</h3>
-                        <p class="movie-rating">8.4</p>
-                    </div>
-                </div>
-                <div class="movie">
-
-                    <div class="movie-about">
-                        <h3 class="movie-title title">Arrival kaip susirasti gdraugikskdkfjksdkjf kas</h3>
-                        <p class="movie-rating">8.4</p>
-                    </div>
-                </div>
-            </section>
-
-        </main>
-
-        <footer></footer>
     </div>
+    <div class="movie-info hidden">
+        <header class="header">
+            <div class="container">
+                <h1 class="title header-title">Movies info</h1>
+                <button aria-label="Back" class="button back" onclick="backToSearch()">
+                    <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+                </button>
+            </div>
+        </header>
+        <div class="container">
+            <div class="movie-about">
+                <p class="movie-error-msg"></p>
+                <div class="flex">
+                    <div class="movie-img-wrapper">
+                        <img src="" alt="movie poster">
 
-    <script src="main.js"> </script>
+                    </div>
+                    <div class="movie-info flex-part inline-flex">
+                        <p class="rating"></p>
+                        <div>
+                            <h2 class="title"></h2>
+                            <p class="genre"></p>
+                            <p class="accent-text">Director: <span class="director"></span></p>
+                            <p class="plot"></p>
+                        </div>
+
+                    </div>
+                    <ul class="actors">
+
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <footer></footer>
+        <script src="main.js"> </script>
 </body>
 
 </html>

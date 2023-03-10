@@ -5,7 +5,7 @@
 ![alt app screenshot](./assets/img/screenshot.png)
 ![alt app screenshot](./assets/img/screenshot2.png)
 
-2022-03-06 homework.
+2023-03-06 homework.
 
 Learning fetch and use data from external API
 **API used**: [http://www.omdbapi.com/](http://www.omdbapi.com/). Design inspiration from [uidesigndaily](https://www.uidesigndaily.com/posts/photoshop-movie-app-mobile-day-193).
